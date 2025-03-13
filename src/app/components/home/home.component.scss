@@ -413,30 +413,32 @@ main {
 
 @media screen and (max-width: 1024px) {
   .hero {
-      height: calc(100vh - 120px); /* Ajuste conforme a altura do navbar */
+      height: calc(100vh - 1220px); /* Ajuste conforme a altura do navbar */
+
+      .primary-text {
+        text-align: center;
+    }
+
+    .primary-text h1 {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .primary-text p {
+        font-size: 16px;
+        margin: 0 auto;
+    }
+
+    .primary-text button {
+        width: 100%;
+        margin-top: 20px;
+    }
   }
 
-  .primary-text {
-      text-align: center;
-  }
-
-  .primary-text h1 {
-      font-size: 44px;
-      text-align: center;
-  }
-
-  .primary-text p {
-      font-size: 16px;
-      margin: 0 auto;
-  }
-
-  .primary-text button {
-      width: 100%;
-      margin-top: 20px;
-  }
-
-  .box-why-choose {
-      gap: 20px;
+  #why-choose {
+    .box-why-choose {
+      gap: 10px;
+    }
   }
 
   .avl {
@@ -445,19 +447,20 @@ main {
       align-items: center;
       justify-content: center;
 
+      .avl-text h2 {
+        font-size: 38px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .avl-text p {
+        font-size: 16px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
   }
 
-  .avl-text h2 {
-      font-size: 38px;
-      text-align: center;
-      margin-bottom: 20px;
-  }
-
-  .avl-text p {
-      font-size: 16px;
-      text-align: center;
-      margin: 0 auto;
-  }
 }
 
 @media screen and (max-width: 853px) {
