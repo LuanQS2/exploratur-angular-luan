@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #fff;
+}
+
+
+html, body {
+  overflow-x: hidden; /* Remove a rolagem horizontal */
+  scroll-behavior: smooth; /* Suaviza o scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: #fff; /* Torna o trilho invisível */
+}
+
+/* Personaliza o polegar do scrollbar (a barra de rolagem visível) */
+::-webkit-scrollbar-thumb {
+  background: #ff4747;
+}
+
+/* Define o tamanho do scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* Largura do scrollbar vertical */
+}
