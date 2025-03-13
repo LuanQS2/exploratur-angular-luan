@@ -174,7 +174,7 @@ main {
       color: #000;
   }
 
-  .destinations-inter p, .destinations-naci p {
+  .destinations-inter-p, .destinations-naci-p {
       font-size: 18px;
       color: #555;
       width: 600px;
@@ -480,11 +480,13 @@ main {
 
   #why-choose {
       margin-top: 100px;
+
+      .why-choose p {
+        width: 500px;
+      }
   }
 
-  .why-choose p {
-      width: 500px;
-  }
+
 
 }
 
@@ -520,21 +522,29 @@ main {
   }
   }
 
-  .why-choose p {
+  #why-choose {
+    .why-choose p {
       width: 350px;
-  }
+    }
 
-  .box-why-choose {
+    .box-why-choose {
       gap: 20px;
+    }
+
   }
 
-  .destinations-inter p {
+  .destinations-inter {
+    .destinations-inter-p {
       width: 350px;
+    }
   }
 
-  .destinations-naci p {
+  .destinations-naci{
+    .destinations-naci-p {
       width: 350px;
+    }
   }
+
 
   .avl {
       display: flex;
@@ -542,32 +552,32 @@ main {
       align-items: center;
       justify-content: center;
 
-  }
+      .avl-text h2 {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 350px;
+    }
 
-  .avl-text h2 {
-      font-size: 32px;
-      text-align: center;
-      margin-bottom: 20px;
-      width: 350px;
-  }
+    .avl-text p {
+        font-size: 16px;
+        text-align: center;
+        margin: 0 auto;
+        width: 350px;
+    }
 
-  .avl-text p {
-      font-size: 16px;
-      text-align: center;
-      margin: 0 auto;
-      width: 350px;
-  }
+    .testimonial-card {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+    }
 
-  .testimonial-card {
-      display: flex;
-      flex-direction: column;
-      height: 300px;
   }
-
 }
 
 @media screen and (max-width: 360px){
-  .primary-container {
+  .hero {
+    .primary-container {
       margin-top: 300px;
       gap: 50px;
   }
@@ -575,8 +585,10 @@ main {
   .logo img {
       width: 150px;
   }
+  }
 
-  .why-choose {
+  #why-choose {
+    .why-choose {
       margin-top: 50px;
   }
 
@@ -589,26 +601,36 @@ main {
       gap: 20px;
   }
 
+  }
+
   .avl {
       margin-top: 50px;
-  }
 
-  .avl-text p {
-      font-size: 16px;
-      text-align: center;
-      margin: 0 auto;
-      width: 300px;
-  }
+      .avl-text h2 {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 300px;
+      }
 
-  .testimonial-card {
-      display: flex;
-      flex-direction: column;
-      height: 350px;
-  }
+      .avl-text p {
+          font-size: 16px;
+          text-align: center;
+          margin: 0 auto;
+          width: 300px;
+      }
 
-  .testimonial-text {
-      font-size: 14px;
-      width: 200px;
-  }
+      .testimonial-card {
+          display: flex;
+          flex-direction: column;
+          height: 350px;
+      }
+
+      .testimonial-text {
+          font-size: 14px;
+          width: 200px;
+      }
+    }
+
 }
 
