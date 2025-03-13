@@ -147,3 +147,25 @@
   }
 
 }
+
+@media screen and (min-width: 855px) {
+  .app-header {
+    .abrir-menu {
+      display: none;
+  }
+  }
+}
+
+@media screen and (max-width: 853px) {
+  .app-header {
+    .abrir-menu  {
+      display: block;
+      padding: 20px 4%;
+  }
+
+  .menu, .login {
+      display: none;
+  }
+  }
+}
+

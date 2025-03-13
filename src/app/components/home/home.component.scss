@@ -1,6 +1,6 @@
 main {
   .hero {
-    background: url('/src/images/v14_565.png') center/cover no-repeat;
+    background: url('/assets/images/v14_565.png') center/cover no-repeat;
     height: calc(100vh - 80px); /* Ajuste conforme a altura do navbar */
     display: flex;
     flex-direction: column;
@@ -102,7 +102,7 @@ main {
 
   /* Imagem inferior esquerda */
   .decorative-image.left {
-      background-image: url('/src/images/v23_685.png'); /* Substitua pelo caminho correto */
+      background-image: url('/assets/images/v23_685.png'); /* Substitua pelo caminho correto */
       bottom: -50px;
       left: -90px;
       transform: rotate(-14.865deg);
@@ -110,7 +110,7 @@ main {
 
   /* Imagem superior direita */
   .decorative-image.right {
-      background-image: url('/src/images/v23_686.png'); /* Substitua pelo caminho correto */
+      background-image: url('/assets/images/v23_686.png'); /* Substitua pelo caminho correto */
       top: -50px;
       right: -180px;
       transform: rotate(10deg);
@@ -393,3 +393,222 @@ main {
       background-color: #555;
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .testimonial-card {
+      padding: 0 10%;
+      height: 220px;
+  }
+
+  .testimonial-header  {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .testimonial-text {
+      width: 250px;
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+      height: calc(100vh - 120px); /* Ajuste conforme a altura do navbar */
+  }
+
+  .primary-text {
+      text-align: center;
+  }
+
+  .primary-text h1 {
+      font-size: 44px;
+      text-align: center;
+  }
+
+  .primary-text p {
+      font-size: 16px;
+      margin: 0 auto;
+  }
+
+  .primary-text button {
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  .box-why-choose {
+      gap: 20px;
+  }
+
+  .avl {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+  }
+
+  .avl-text h2 {
+      font-size: 38px;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .avl-text p {
+      font-size: 16px;
+      text-align: center;
+      margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 853px) {
+  .box-why-choose {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+  }
+
+  .box p  {
+      margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .primary-container {
+      margin-top: 250px;
+      gap: 100px;
+  }
+
+  #why-choose {
+      margin-top: 100px;
+  }
+
+  .why-choose p {
+      width: 500px;
+  }
+
+}
+
+@media screen and (max-width: 430px){
+  .hero {
+    .primary-text {
+      text-align: center;
+      margin-top: 50px;
+
+      h1 {
+        font-size: 34px;
+        text-align: center;
+        width: 350px;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 0 auto;
+        width: 300px;
+    }
+
+     button {
+        width: 80%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+     img {
+        width: 100%;
+        height: 300px;
+    }
+  }
+  }
+
+  .why-choose p {
+      width: 350px;
+  }
+
+  .box-why-choose {
+      gap: 20px;
+  }
+
+  .destinations-inter p {
+      width: 350px;
+  }
+
+  .destinations-naci p {
+      width: 350px;
+  }
+
+  .avl {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+  }
+
+  .avl-text h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+      width: 350px;
+  }
+
+  .avl-text p {
+      font-size: 16px;
+      text-align: center;
+      margin: 0 auto;
+      width: 350px;
+  }
+
+  .testimonial-card {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+  }
+
+}
+
+@media screen and (max-width: 360px){
+  .primary-container {
+      margin-top: 300px;
+      gap: 50px;
+  }
+
+  .logo img {
+      width: 150px;
+  }
+
+  .why-choose {
+      margin-top: 50px;
+  }
+
+  .why-choose p {
+      font-size: 14px;
+      width: 300px;
+  }
+
+  .box-why-choose {
+      gap: 20px;
+  }
+
+  .avl {
+      margin-top: 50px;
+  }
+
+  .avl-text p {
+      font-size: 16px;
+      text-align: center;
+      margin: 0 auto;
+      width: 300px;
+  }
+
+  .testimonial-card {
+      display: flex;
+      flex-direction: column;
+      height: 350px;
+  }
+
+  .testimonial-text {
+      font-size: 14px;
+      width: 200px;
+  }
+}
+
