@@ -1,4 +1,8 @@
 main {
+  span{
+    color: #ff4747;
+  }
+
   .hero {
     background: url('/assets/images/v14_565.png') center/cover no-repeat;
     height: calc(100vh - 80px); /* Ajuste conforme a altura do navbar */

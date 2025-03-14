@@ -1,8 +1,20 @@
 <main>
-  <section>
-
+  <section class="form-section">
+    <img src="/assets/images/explora Tur.svg"/>
+    <h2>{{title}}</h2>
+    <ng-content></ng-content>
+    <div class= "btn-wrapper">
+      <button class="btn-primary">{{ primaryBtnText }}</button>
+      <div class="divider">
+        <div></div>
+        <span>or</span>
+        <div></div>
+      </div>
+      <button class="btn-secondary">{{ secondaryBtnText }}</button>
+    </div>
   </section>
-  <section>
-    
+  <section class="main-section">
+    <h1>Descubra novos destinos com a ExploraTur!</h1>
+    <img src="/assets/images/undraw_world_bdnk.svg"/>
   </section>
 </main>
