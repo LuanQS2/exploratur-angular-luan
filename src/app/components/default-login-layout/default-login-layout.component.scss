@@ -20,6 +20,11 @@ main {
         min-height: 100vh;
         flex-grow: 1;
         background-color: $gray-bg;
+
+         img {
+          width: 100%;
+          height: 650px;
+        }
     }
 
     .form-section {
@@ -91,4 +96,76 @@ main {
             }
         }
     }
+}
+
+@media  (max-width: 1370px) {
+  main {
+    .main-section {
+     img {
+          height: 450px;
+        }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    .form-section {
+      img {
+        width: 100%;
+        height: 70px;
+      }
+      .btn-wrapper {
+        gap: 15px;
+
+        button {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+   main {
+    .main-section {
+      h1 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+     img {
+          height: 250px;
+        }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+   main {
+    margin-top: 180px;
+
+    .form-section {
+      img {
+        height: 100px;
+      }
+    }
+
+    .main-section {
+      display: none;
+    }
+   }
+}
+
+
+@media (max-width: 390px) {
+   main {
+    margin-top: 120px;
+   }
+}
+
+@media (max-width: 360px) {
+   main {
+    margin-top: 90px;
+   }
 }

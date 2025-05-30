@@ -1,0 +1,48 @@
+<app-default-login-layout
+    title="Sign in and start today!t"
+    primaryBtnText="Cadastre-se"
+    secondaryBtnText="Entrar"
+    (submit)="submit()"
+    (navigate)="navigate()"
+
+>
+    <form [formGroup]="signupForm">
+      <app-primary-input
+        formName="name"
+        inputName="name"
+        type="text"
+        label="Nome"
+        placeholder="Seu nome"
+      >
+      <img src="/assets/svg/email-icon.svg"/>
+      </app-primary-input>
+      <app-primary-input
+        formName="email"
+        inputName="email"
+        type="email"
+        label="Email"
+        placeholder="johndoe@gmail.com"
+      >
+      <img src="/assets/svg/email-icon.svg"/>
+      </app-primary-input>
+      <app-primary-input
+              formName="password"
+              inputName="password"
+              type="password"
+              label="Senha"
+              placeholder="Sua senha"
+          >
+          <img src="/assets/svg/password-icon.svg"/>
+      </app-primary-input>
+
+      <app-primary-input
+              formName="password"
+              inputName="password"
+              type="password"
+              label="Confirmar senha"
+              placeholder="Confirme sua senha"
+          >
+          <img src="/assets/svg/password-icon.svg"/>
+      </app-primary-input>
+    </form>
+</app-default-login-layout>

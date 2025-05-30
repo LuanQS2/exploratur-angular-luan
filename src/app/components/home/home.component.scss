@@ -398,7 +398,23 @@ main {
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1370px) {
+  .hero {
+    .primary-container {
+      gap: 80px;
+      margin-top: 200px;
+    }
+
+    .primary-text h1 {
+      font-size: 42px;
+    }
+
+    img {
+        width: 100%;
+        height: 310px;
+    }
+  }
+
   .testimonial-card {
       padding: 0 10%;
       height: 220px;

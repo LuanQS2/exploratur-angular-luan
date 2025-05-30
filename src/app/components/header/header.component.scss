@@ -10,7 +10,7 @@
       width: 100%;
       top: 0;
       left: 0;
-      z-index: 1000; /* Garante que fique acima dos outros elementos */
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -42,7 +42,6 @@
       color: #ff4747;
   }
 
-  /* Login e botão de cadastro */
   .login {
       display: flex;
       align-items: center;
@@ -86,7 +85,6 @@
       font-weight: 600;
   }
 
-  /*menu mobile*/
   .menu-mobile {
       background: #fff;
       height: 100vh;
