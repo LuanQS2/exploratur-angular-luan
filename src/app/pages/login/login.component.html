@@ -2,10 +2,12 @@
   title="Faça login na sua conta"
   primaryBtnText="Entrar agora"
   secondaryBtnText="Cadastrar agora"
+  (submit)="submit()"
+  (navigate)="navigate()"
 >
   <form [formGroup]="loginForm">
     <app-primary-input
-      formName="email"
+      formControlName="email"
       inputName="email"
       type="email"
       label="Email"
@@ -14,7 +16,7 @@
     <img src="/assets/svg/email-icon.svg"/>
     </app-primary-input>
     <app-primary-input
-            formName="password"
+            formControlName="password"
             inputName="password"
             type="password"
             label="Sua senha"
