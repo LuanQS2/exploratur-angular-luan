@@ -1,48 +1,62 @@
 <app-default-login-layout
-    title="Sign in and start today!t"
-    primaryBtnText="Cadastre-se"
-    secondaryBtnText="Entrar"
+    title="Crie sua conta" primaryBtnText="Cadastre-se"
+    secondaryBtnText="Já tenho uma conta"
     (submit)="submit()"
     (navigate)="navigate()"
-
 >
     <form [formGroup]="signupForm">
       <app-primary-input
-        formName="name"
-        inputName="name"
+        formControlName="name" inputName="name"
         type="text"
-        label="Nome"
-        placeholder="Seu nome"
+        label="Nome Completo"
+        placeholder="Seu nome completo"
       >
-      <img src="/assets/svg/email-icon.svg"/>
-      </app-primary-input>
+        <img src="/assets/svg/email-icon.svg"/> </app-primary-input>
+      <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="error-messages">
+        <small *ngIf="name?.errors?.['required']">Nome é obrigatório.</small>
+        <small *ngIf="name?.errors?.['minlength']">Nome precisa ter no mínimo 3 caracteres.</small>
+      </div>
+
       <app-primary-input
-        formName="email"
+        formControlName="email"
         inputName="email"
         type="email"
         label="Email"
         placeholder="johndoe@gmail.com"
       >
-      <img src="/assets/svg/email-icon.svg"/>
+        <img src="/assets/svg/email-icon.svg"/>
       </app-primary-input>
-      <app-primary-input
-              formName="password"
-              inputName="password"
-              type="password"
-              label="Senha"
-              placeholder="Sua senha"
-          >
-          <img src="/assets/svg/password-icon.svg"/>
-      </app-primary-input>
+      <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error-messages">
+        <small *ngIf="email?.errors?.['required']">Email é obrigatório.</small>
+        <small *ngIf="email?.errors?.['email']">Formato de email inválido.</small>
+      </div>
 
       <app-primary-input
-              formName="password"
-              inputName="password"
-              type="password"
-              label="Confirmar senha"
-              placeholder="Confirme sua senha"
-          >
-          <img src="/assets/svg/password-icon.svg"/>
+        formControlName="password"
+        inputName="password"
+        type="password"
+        label="Senha"
+        placeholder="Sua senha"
+      >
+        <img src="/assets/svg/password-icon.svg"/>
       </app-primary-input>
+      <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error-messages">
+        <small *ngIf="password?.errors?.['required']">Senha é obrigatória.</small>
+        <small *ngIf="password?.errors?.['minlength']">Senha precisa ter no mínimo 6 caracteres.</small>
+      </div>
+
+      <app-primary-input
+        formControlName="passwordConfirm"
+        inputName="passwordConfirm"
+        type="password"
+        label="Confirmar senha"
+        placeholder="Confirme sua senha"
+      >
+        <img src="/assets/svg/password-icon.svg"/>
+      </app-primary-input>
+      <div *ngIf="passwordConfirm?.invalid && (passwordConfirm?.dirty || passwordConfirm?.touched)" class="error-messages">
+        <small *ngIf="passwordConfirm?.errors?.['required']">Confirmação de senha é obrigatória.</small>
+        <small *ngIf="passwordConfirm?.errors?.['minlength']">Confirmação de senha precisa ter no mínimo 6 caracteres.</small>
+        </div>
     </form>
 </app-default-login-layout>

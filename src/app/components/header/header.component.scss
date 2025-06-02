@@ -18,6 +18,31 @@
       transition: background 0.3s ease-in-out;
   }
 
+   .login {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .user-greeting {
+                color: #000;
+                font-weight: 600;
+            }
+
+            .logout-btn {
+                background-color: #ff4747;
+                color: white;
+                border: none;
+                padding: 8px 15px;
+                border-radius: 20px;
+                cursor: pointer;
+                font-weight: 600;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #e03131;
+                }
+            }
+        }
   /* Logo */
   .logo img {
       height: 80px;
@@ -144,6 +169,15 @@
       display: none;
   }
 
+  .user-greeting-mobile {
+      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 20px 8%;
+      display: block;
+      text-align: right;
+  }
+
 }
 
 @media screen and (min-width: 855px) {
@@ -164,6 +198,11 @@
   .menu, .login {
       display: none;
   }
+
+  .logo img{
+    width: 150px;
+  }
+
   }
 }
 

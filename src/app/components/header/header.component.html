@@ -2,13 +2,19 @@
   <nav id="navbar">
       <span class="logo"><img src="/assets/images/explora Tur.svg"/></span>
       <ul class="menu">
-          <li><a href="#">INICIO</a></li>
-          <li><a href="#">DESTINOS</a></li>
+          <li><a routerLink="/">INICIO</a></li>
+          <li><a routerLink="/destinos">DESTINOS</a></li>
           <li><a href="#">CONTATO</a></li>
       </ul>
 
       <div class="login">
-          <div class="login-btn"><a [routerLink]="['/login']"><i class="bi bi-person-circle"></i> Entre ou cadastre-se</a></div>
+          <ng-container *ngIf="!currentUser">
+            <div class="login-btn"><a [routerLink]="['/login']"><i class="bi bi-person-circle"></i> Entre ou cadastre-se</a></div>
+          </ng-container>
+
+          <ng-container *ngIf="currentUser">
+            <div class="user-greeting">Olá, {{ currentUser?.name }}</div>  <button class="logout-btn" (click)="logout()">Sair</button>
+          </ng-container>
       </div>
 
       <div class="abrir-menu" id="btn-menu">
@@ -19,14 +25,17 @@
           <div class="btn-fechar">
                   <i class="bi bi-x fechar-icon"></i>
           </div>
-
-
-
           <div class="div-ul">
               <ul>
-                  <li><a href="#">INICIO</a></li>
-                  <li><a href="#">DESTINOS</a></li>
+                  <li><a routerLink="/">INICIO</a></li>
+                  <li><a routerLink="/destinos">DESTINOS</a></li>
                   <li><a href="#">CONTATO</a></li>
+                  <ng-container *ngIf="!currentUser">
+                    <li><a [routerLink]="['/login']">Entre ou cadastre-se</a></li>
+                  </ng-container>
+                  <ng-container *ngIf="currentUser">
+                    <li class="user-greeting-mobile">Olá, {{ currentUser?.name }}</li> <li><a (click)="logout()" style="cursor: pointer;">Sair</a></li>
+                  </ng-container>
               </ul>
           </div>
       </div>

@@ -3,6 +3,7 @@ import { DefaultLoginLayoutComponent } from "../../components/default-login-layo
 import { FormControl, FormControlStatus, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PrimaryInputComponent } from '../../components/primary-input/primary-input.component';
 import { Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -23,6 +24,7 @@ export class LoginComponent {
 
   constructor(
     private router: Router,
+    private loginService: LoginService
   ) {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -31,7 +33,16 @@ export class LoginComponent {
   }
 
   submit() {
-    console.log(this.loginForm.value)
+     if (this.loginForm.valid) {
+      const email = this.loginForm.value.email;
+      const name = email.split('@')[0];
+      this.loginService.login(name);
+      this.router.navigate(['/']);
+      console.log('Login bem-sucedido:', this.loginForm.value);
+    } else {
+      console.log('Formulário de login inválido');
+      this.loginForm.markAllAsTouched(); 
+    }
   }
 
   navigate() {
